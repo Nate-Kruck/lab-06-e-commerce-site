@@ -1,5 +1,7 @@
 // IMPORT MODULES under test here:
 import renderVeggies from '../products/render-veggies.js';
+import findById from '../common/utils.js';
+import veggies from '../data/veggies.js';
 
 const test = QUnit.test;
 
@@ -30,18 +32,30 @@ test('should match static example', assert => {
     
 });
 
+test('find the product id', assert => {
+    //Arrange
+    const veggieId = 'tomatoes';
+    const expected = 'Cherry Tomato';
+
+    //Act
+    const veggieFound = findById(veggies, veggieId);
+
+    //Assert
+    assert.ok(veggieFound);
+    assert.equal(veggieFound.name, expected);
+});
 
 
-
-
-
-
-/* 
-
-<li class="confused-fruit" title="A small, juicy treat.">
-<img src="../assets/cherry.jpg" alt="Cherry Tomato image">
-<p class="price">$2.00 <button value="undefined">Add</button>
-</p> 
-</li>
-
+/* test('calculate the total by multiplying quantity and price for veggie', assert => {
+    const veggieQuantity = 10;
+    const veggiePrice = 
+});
 */
+
+
+
+
+
+
+
+
