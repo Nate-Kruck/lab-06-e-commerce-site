@@ -1,4 +1,4 @@
-const tomato = {
+/* const tomato = {
     id: 'tomatoes',
     name: 'Cherry Tomato',
     image: 'cherry.jpg',
@@ -7,7 +7,7 @@ const tomato = {
     price: 2.00,
     cost: 1.00
 };
-
+*/
 const cucumber = {
     id: 'garden',
     name: 'Cucumber',
@@ -49,7 +49,7 @@ const onion = {
 };
 
 const veggies = [
-    tomato,
+    //tomato,
     cucumber,
     pepper,
     brocolli,

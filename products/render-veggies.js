@@ -1,15 +1,17 @@
-function renderVeggies(veggie) {
+export function renderVeggies(veggie) {
 
     // creating vegetable list for html
-    const li = document.createElement('li');
-    li.className = veggie.category;
-    li.title = veggie.description;
+    const liEl = document.createElement('li');
+    const category = veggie.category;
+    liEl.classList.add(category);
+    const title = veggie.description;
+    liEl.title = title;
 
     // adding images to each element
-    const img = document.createElement('img');
-    img.src = '../assets/' + veggie.image;
-    img.alt = veggie.name + ' image';
-    li.appendChild(img);
+    const imgEl = document.createElement('img');
+    imgEl.src = '../assets/' + veggie.image;
+    imgEl.alt = veggie.name + ' tomato';
+    liEl.append(imgEl);
 
     // add p element to contain the price and add button
     const p = document.createElement('p');
@@ -24,12 +26,12 @@ function renderVeggies(veggie) {
     const button = document.createElement('button');
     button.textContent = 'Add';
     button.value = veggie.code;
-    p.appendChild(button);
+    p.append(button);
 
     // nests the add button in the 'p' element so it appears on the same line
-    li.appendChild(p);
+    liEl.append(p);
 
-    return li;
+    return liEl;
 }
 
 export default renderVeggies;
