@@ -2,7 +2,7 @@
 import renderVeggies from '../products/render-veggies.js';
 import { findById, calcLineItem, calcTotal } from '../common/utils.js';
 import veggies from '../data/veggies.js';
-import cartItem from '../data/veggies.js';
+//import cartItem from '../data/cart.js';
 
 const test = QUnit.test;
 

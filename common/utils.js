@@ -33,3 +33,12 @@ export function calcTotal(cartItem, veggies) {
     
     return roundCurrency(totalCost);
 }
+
+
+// took this function from the example code
+export function usDollar(number) {
+    return number.toLocalString('en-US', {
+        style: 'currency',
+        currency: 'USD'
+    });
+}
