@@ -1,3 +1,9 @@
+body {
+    background-image: url("../assets/ocean-blue.png");
+    text-align: center;
+    
+}
+
 #veggies {
     padding: 0;
     display: flex;

@@ -1,1 +1,16 @@
 /* add home page styles here */
+body {
+    background-image: url("../assets/ocean-blue.png");
+    text-align: center;
+    
+}
+
+h1 {
+    text-align: center;
+}
+
+.buy {
+  background: darken(red, 1.5%);
+  font-weight: 100;  
+  }
+
