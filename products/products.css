@@ -3,3 +3,28 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+ol, ul {
+    list-style: none;
+}
+
+img, p, button {
+    padding: 6px 12px 6px 12px;
+    margin: 0 5px;
+    border: 1px solid firebrick;
+    color: black;
+    text-align: center;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: gray;
+}
+
+button:active {
+    background-color: firebrick;
+}
+
+
+
+

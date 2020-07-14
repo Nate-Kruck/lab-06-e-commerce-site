@@ -1,4 +1,4 @@
-export function renderVeggies(veggie) {
+export default function renderVeggies(veggie) {
 
     // creating vegetable list for html
     const liEl = document.createElement('li');
@@ -25,7 +25,7 @@ export function renderVeggies(veggie) {
     // this is for the add button on the rendered page
     const button = document.createElement('button');
     button.textContent = 'Add';
-    button.value = veggie.code;
+    button.value = veggie.id;
     p.append(button);
 
     // nests the add button in the 'p' element so it appears on the same line
@@ -34,4 +34,3 @@ export function renderVeggies(veggie) {
     return liEl;
 }
 
-export default renderVeggies;

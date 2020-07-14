@@ -1,5 +1,5 @@
 // IMPORT MODULES under test here:
-import { renderVeggies } from '../products/render-veggies.js';
+import renderVeggies from '../products/render-veggies.js';
 
 const test = QUnit.test;
 
@@ -18,7 +18,7 @@ test('should match static example', assert => {
         cost: 1.00
     };
     
-    const expected = '<li class="confused-fruit" title="A small, juicy treat"><img src="../assets/cherry.jpg" alt="cherry tomato"><p class="price">$2.00 <button value="undefined">Add</button></p></li>';
+    const expected = '<li class="confused-fruit" title="A small, juicy treat"><img src="../assets/cherry.jpg" alt="cherry tomato"><p class="price">$2.00 <button value="cherry-tom">Add</button></p></li>';
     
     //Act 
     // Call the function you're testing and set the result to a const
