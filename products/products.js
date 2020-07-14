@@ -5,6 +5,6 @@ const list = document.getElementById('veggies');
 
 for (let i = 0; i < veggies.length; i++) {
     const veggie = veggies[i];
-    const yummyVeggie = renderVeggies(veggie);
-    list.append(yummyVeggie);
+    const dom = renderVeggies(veggie);
+    list.append(dom);
 }
