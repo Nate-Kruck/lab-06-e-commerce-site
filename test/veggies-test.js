@@ -1,13 +1,14 @@
 // IMPORT MODULES under test here:
 import renderVeggies from '../products/render-veggies.js';
-import findById from '../common/utils.js';
+import { findById, calcLineItem, calcTotal } from '../common/utils.js';
 import veggies from '../data/veggies.js';
+import cartItem from '../data/veggies.js';
 
 const test = QUnit.test;
 
 QUnit.module('Render Veggies');
 
-test('should match static example', assert => {
+test('should match static example', (assert) => {
     //Arrange
     // Set up your arguments and expectations
     const cherryTom = {
@@ -32,7 +33,7 @@ test('should match static example', assert => {
     
 });
 
-test('find the product id', assert => {
+test('find the product id', (assert) => {
     //Arrange
     const veggieId = 'tomatoes';
     const expected = 'Cherry Tomato';
@@ -46,11 +47,30 @@ test('find the product id', assert => {
 });
 
 
-/* test('calculate the total by multiplying quantity and price for veggie', assert => {
-    const veggieQuantity = 10;
-    const veggiePrice = 
+test('calculate the total by multiplying quantity and price for veggie', (assert) => {
+
+    //Arrange
+    const quantity = 10;
+    const price = 2.50;
+    const expected = 25;
+
+    //Act
+    const total = calcLineItem(quantity, price);
+
+    //Assert
+    assert.equal(total, expected);
 });
-*/
+
+test('this should calculate order total', (assert) => {
+    //test only works if cartItem has a value, I am not sure how this is possible
+    const cartItem = 1;
+    const expected = 15.15;
+
+    const totalCost = calcTotal(cartItem, veggies);
+
+    assert.equal(totalCost, expected);
+});
+
 
 
 
