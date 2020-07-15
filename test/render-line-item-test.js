@@ -1,4 +1,4 @@
-import veggies from '../data/veggies.js';
+import veggieData from '../data/veggies.js';
 import { findById } from '../common/utils.js';
 import renderLineitem from '../cart/render-line-items.js';
 
@@ -6,7 +6,7 @@ const test = QUnit.test;
 
 QUnit.module('Render Line');
 
-test('should match static example', (assert) => {
+test('should match static example number 2', (assert) => {
     //Arrange
     //Set up arguments and expectations
     const lineItem = {
@@ -14,8 +14,8 @@ test('should match static example', (assert) => {
         quantity: 4
     };
 
-    const tomatoes = findById(veggies, lineItem.id);
-    const expected = '<tr><th>class="top-left">Veggies</th><th>Qty</th><th>Price</th><th>Total</th></tr>';
+    const tomatoes = findById(veggieData, lineItem.id);
+    const expected = '<tr><td class="top-left">Cherry Tomato</td><img src="../assets/cherry.jpg" alt="Cherry Tomato tomato"><td>4</td><td>$2.00</td><td class="total-dollar">$8.00</td></tr>';
 
     //Act
     //Call the function being tested and set result to a const
@@ -27,4 +27,3 @@ test('should match static example', (assert) => {
     assert.equal(html, expected);
 });
 
-    //

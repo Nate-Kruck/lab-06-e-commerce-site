@@ -1,25 +1,23 @@
-export function findById(veggies, id) {
+export function findById(someArray, someId) {
+    let match = null;
     //conditional statement to loop the array
-    for (let i = 0; i < veggies.length; i++){
-        const veggie = veggies[i];
-
-            // checking id against veggies.id
-        if (veggie.id === id) {
-            return veggie;
+    for (let i = 0; i < someArray.length; i++){
+        if (someId === someArray[i].id) {
+            match = someArray[i];
         }
     }
+
     // returns null if nothing was found in the loop
-    return null;
+    return match;
+
 }
 
 export function calcLineItem(quantity, price) {
-    const amount = quantity * price;
-    return roundCurrency(amount);
+    const total = quantity * price;
+    return Math.round(total * 100) / 100;
 }
 
-export function roundCurrency(price) {
-    return Math.round(price * 100) / 100;
-}
+
 
 export function calcOrderTotal(cart, veggies) {
     let totalCost = 0;
@@ -27,18 +25,11 @@ export function calcOrderTotal(cart, veggies) {
     for (let i = 0; i < cart.length; i++) {
         const lineItem = cart[i];
         const veggie = findById(veggies, lineItem.id);
-        const lineTotal = calcLineItem(lineItem.quantitiy, veggie.price);
+        const lineTotal = calcLineItem(lineItem.quantity, veggie.price);
         totalCost += lineTotal;
     }
     
-    return roundCurrency(totalCost);
+    return Math.round(totalCost);
 }
 
 
-// took this function from the example code
-export function usDollar(number) {
-    return number.toLocalString('en-US', {
-        style: 'currency',
-        currency: 'USD'
-    });
-}

@@ -1,7 +1,7 @@
 // IMPORT MODULES under test here:
 import renderVeggies from '../products/render-veggies.js';
 import { findById, calcLineItem, calcOrderTotal } from '../common/utils.js';
-import veggies from '../data/veggies.js';
+import veggieData from '../data/veggies.js';
 import cart from '../data/cart.js';
 
 const test = QUnit.test;
@@ -39,7 +39,7 @@ test('find the product id', (assert) => {
     const expected = 'Cherry Tomato';
 
     //Act
-    const veggieFound = findById(veggies, veggieId);
+    const veggieFound = findById(veggieData, veggieId);
 
     //Assert
     assert.ok(veggieFound);
@@ -63,11 +63,12 @@ test('calculate the total by multiplying quantity and price for veggie', (assert
 
 test('this should calculate order total', assert => {
     
-    const expected = 15.15;
+    const expected = 42;
 
-    const totalCost = calcOrderTotal(cart, veggies);
+    const totalCost = calcOrderTotal(cart, veggieData);
 
     assert.equal(totalCost, expected);
+    
 });
 
 

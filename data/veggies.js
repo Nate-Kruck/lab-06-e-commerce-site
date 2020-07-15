@@ -47,7 +47,7 @@ const onion = {
     cost: 0.75
 };
 
-const veggies = [
+const veggieData = [
     tomato,
     cucumber,
     pepper,
@@ -55,4 +55,4 @@ const veggies = [
     onion
 ];
 
-export default veggies;
+export default veggieData;

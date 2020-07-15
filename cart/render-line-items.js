@@ -1,29 +1,30 @@
-import { usDollar } from '../common/utils.js';
-//import renderVeggies from '../products/render-veggies.js';
+export default function renderLineItem(lineItem, veggie) {
+    const tableRow = document.createElement('tr');
 
-function renderLineItem(lineItem, veggie) {
-    const cartTr = document.createElement('tr');
-
+    
     const veggieName = document.createElement('td');
-    veggieName.className = 'top-left';
+    veggieName.classList.add('top-left');
     veggieName.textContent = veggie.name;
-    cartTr.append(veggieName);
+    tableRow.append(veggieName);
+ 
+    const imgEl = document.createElement('img');
+    imgEl.src = '../assets/' + veggie.image;
+    imgEl.alt = veggie.name + ' tomato';
+    tableRow.append(imgEl);
 
-    const quantityName = document.createElement('td');
-    quantityName.textContent = lineItem.quantity;
-    cartTr.append(quantityName);
+    const quantityData = document.createElement('td');
+    quantityData.textContent = lineItem.quantity;
+    tableRow.append(quantityData);
 
-    const priceName = document.createElement('td');
-    priceName.textContent = usDollar(veggie.price);
-    cartTr.append(priceName);
+    const priceData = document.createElement('td');
+    priceData.textContent = `$${veggie.price.toFixed(2)}`;
+    tableRow.append(priceData);
 
     const totalName = document.createElement('td');
-    totalName.textContent = 'total-dollar';
-    const totalPrice = lineItem.quantity * veggie.price;
-    totalName.textContent = usDollar(totalPrice);
-    cartTr.append(totalName);
+    totalName.classList.add('total-dollar');
+    totalName.textContent = '$' + Number(lineItem.quantity * veggie.price).toFixed(2);
+    tableRow.append(totalName);
 
-    return cartTr;
+    return tableRow;
 }
 
-export default renderLineItem;
