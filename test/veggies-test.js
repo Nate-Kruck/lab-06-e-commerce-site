@@ -1,8 +1,8 @@
 // IMPORT MODULES under test here:
 import renderVeggies from '../products/render-veggies.js';
-import { findById, calcLineItem, calcTotal } from '../common/utils.js';
+import { findById, calcLineItem, calcOrderTotal } from '../common/utils.js';
 import veggies from '../data/veggies.js';
-//import cartItem from '../data/cart.js';
+import cart from '../data/cart.js';
 
 const test = QUnit.test;
 
@@ -61,12 +61,11 @@ test('calculate the total by multiplying quantity and price for veggie', (assert
     assert.equal(total, expected);
 });
 
-test('this should calculate order total', (assert) => {
-    //test only works if cartItem has a value, I am not sure how this is possible
-    const cartItem = 1;
+test('this should calculate order total', assert => {
+    
     const expected = 15.15;
 
-    const totalCost = calcTotal(cartItem, veggies);
+    const totalCost = calcOrderTotal(cart, veggies);
 
     assert.equal(totalCost, expected);
 });

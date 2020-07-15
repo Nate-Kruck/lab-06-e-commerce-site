@@ -3,12 +3,12 @@ import { usDollar } from '../common/utils.js';
 
 function renderLineItem(lineItem, veggie) {
     const cartTr = document.createElement('tr');
-    
+
     const veggieName = document.createElement('td');
     veggieName.className = 'top-left';
     veggieName.textContent = veggie.name;
     cartTr.append(veggieName);
-    
+
     const quantityName = document.createElement('td');
     quantityName.textContent = lineItem.quantity;
     cartTr.append(quantityName);
