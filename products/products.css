@@ -1,6 +1,7 @@
 body {
-    background-image: url("../assets/ocean-blue.png");
+    background-image: url("../assets/wood-background.jpg");
     text-align: center;
+    background-repeat: none;
     
 }
 
@@ -29,6 +30,14 @@ button:hover {
 
 button:active {
     background-color: firebrick;
+}
+
+p {
+    color: white;
+}
+
+a {
+    color: white;
 }
 
 
