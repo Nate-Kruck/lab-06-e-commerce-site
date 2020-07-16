@@ -1,5 +1,5 @@
 import { getCart, findById } from '../common/utils.js';
-import veggieData from '../data/veggies.js';
+//import veggieData from '../data/veggies.js';
 
 export default function renderVeggies(veggie) {
 
