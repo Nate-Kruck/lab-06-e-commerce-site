@@ -12,6 +12,7 @@ export function findById(someArray, someId) {
 
 }
 
+
 export function calcLineItem(quantity, price) {
     const total = quantity * price;
     return Math.round(total * 100) / 100;
@@ -21,7 +22,7 @@ export function calcLineItem(quantity, price) {
 
 export function calcOrderTotal(cart, veggies) {
     let totalCost = 0;
-
+    
     for (let i = 0; i < cart.length; i++) {
         const lineItem = cart[i];
         const veggie = findById(veggies, lineItem.id);
@@ -32,4 +33,19 @@ export function calcOrderTotal(cart, veggies) {
     return Math.round(totalCost);
 }
 
+export function toUSD(number) {
+    return number.toLocalString('en-US', {
+        style: 'currency',
+        currency: 'USD'
+    });
+}
+
+export function getCart() {
+    
+    const emptyCart = '[]';
+    const cartInLocalStorage = localStorage.getItem('CART') || emptyCart;
+    const cart = JSON.parse(cartInLocalStorage);
+
+    return cart;
+}
 
