@@ -1,17 +1,28 @@
 body {
     text-align: center;
 }
+
+
 tr {
     padding: 0;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
-    border: 3px solid black;
+    border: 3px solid red;
     align-self: center;
+}
+
+td {
+    padding: 3px;
+    
 }
 
 img {
     border: 3px solid black;
+    border-radius: 25%;
+    width: 150px;
+    width: 130px;
+
 }
 
 #insert-rows {
@@ -24,6 +35,12 @@ img {
     align-content: center;
     margin: 10px;
     
+}
+
+footer nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
     
 

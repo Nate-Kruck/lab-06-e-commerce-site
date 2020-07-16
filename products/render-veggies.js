@@ -1,3 +1,6 @@
+import { getCart, findById } from '../common/utils.js';
+//import veggieData from '../data/veggies.js';
+
 export default function renderVeggies(veggie) {
 
     // creating vegetable list for html
@@ -26,6 +29,30 @@ export default function renderVeggies(veggie) {
     const button = document.createElement('button');
     button.textContent = 'Add';
     button.value = veggie.id;
+    button.addEventListener('click', () => {
+        
+        const cart = getCart();
+
+        const veggieInCart = findById(cart, veggie.id);
+
+        if (veggieInCart) {
+            veggieInCart.quantity++; 
+        } else {
+            const newVeggie = {
+                id: veggie.id,
+                quantity: 1
+            };
+
+            cart.push(newVeggie);
+        }
+        console.log(cart);
+        
+        const stringCart = JSON.stringify(cart);
+        localStorage.setItem('CART', stringCart);
+
+        alert('1 ' + veggie.name + ' added to cart');
+    });
+
     p.append(button);
 
     // nests the add button in the 'p' element so it appears on the same line

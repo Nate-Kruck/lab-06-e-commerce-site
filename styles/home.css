@@ -1,18 +1,32 @@
 /* just adding this line so submit another pull request */
 
 /* add home page styles here */
+@import url('https://fonts.googleapis.com/css?family=Raleway:200');
+
 body {
-    background-image: url("../assets/ocean-blue.png");
+    background-image: url("../assets/vegetable-stand.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
     text-align: center;
-    
 }
 
 h1 {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-color: #6494AA;
+    border: 2px solid #151515;
 }
 
-.buy {
-  background: darken(red, 1.5%);
-  font-weight: 100;  
-  }
+a {
+    display: flex;
+    position: relative;
+    top: 210px;
+    left: 45%;
+    background-color: #6494AA;
+    
+}
 
+div {
+    color: white;
+    font-family: ;
+}
