@@ -1,9 +1,10 @@
 //import cart from '../data/cart.js';
 import veggieData from '../data/veggies.js';
-import { findById, getCart } from '../common/utils.js';
+import { findById, getCart, calcOrderTotal } from '../common/utils.js';
 import renderLineItem from './render-line-items.js';
 
-const tableBody = document.querySelector('#insert-rows');
+const tableBody = document.querySelector('tbody');
+const orderTotalCell = document.getElementById('order-total');
 
 // What is the difference between querySelector and getElementById? 
 const orderButton = document.querySelector('button');
@@ -21,9 +22,9 @@ for (let i = 0; i < cart.length; i++) {
     tableBody.append(dom);
 }
 
-/*const totalCost = calcOrderTotal(cart, veggieData);
-totalCostInput.textContent = toUSD(totalCost);
-*/
+const totalCost = calcOrderTotal(cart, veggieData);
+orderTotalCell.textContent = '$ ' + Number(totalCost);
+
 //
 
 
@@ -36,7 +37,7 @@ if (cart.length === 0) {
 // took this code from the example code
 else {
     orderButton.addEventListener('click', () => {
-        alert('Order placed:' + (cart, true, ''));
+        alert('Thanks for supporting our farm!' + (cart, true, ''));
         localStorage.removeItem('CART');
         window.location = '../index.html';
     });

@@ -3,43 +3,102 @@ body {
     background-image: url("../assets/farm-background.jpg");
 }
 
-
-tr {
-    padding: 2px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-self: center;
+header {
+    text-align: center;
+    padding: 10px;
+    font-size: 25px;
 }
 
-td {
-    
-    
+table, .button-container {
+    width: 100%;
+    max-width: 750px;
+    margin: auto;
+}
+
+.button-container {
+    text-align: right;
+}
+
+nav {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    text-transform: uppercase;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    cursor: pointer;
+    border: 2px solid #F0EDEE;
+    border-radius: 14%;
+
+}
+
+#order-button {
+    margin-top: 30px;
+    height: 35px;
+    width: 125px;
+    font-size: 1em;
+    background: #D9C5B2;
+    color: white;
+}
+
+#order-button:disabled {
+    opacity: 0.7;
+}
+
+table {
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+thead {
+    background: gray;
+    color: white;
+}
+
+table th, table td {
+    text-align: right;
+    padding: 10px;
+}
+
+.align-left {
+    text-align: left;
+}
+
+tbody {
+    background: white;
+}
+
+tbody tr:nth-child(even) {
+    background: grey;
+}
+
+tbody td {
+    font-size: 0.9rem;
+}
+
+.total-dollar {
+    font-weight: bolder;
+}
+
+tfoot {
+    background: grey;
+    color: white;
+}
+
+
+a {
+    padding: 20px;
+    color: #F0EDEE;
 }
 
 img {
-    width: 150px;
-    width: 130px;
+    width: 75px;
     
 }
 
-#insert-rows {
-    padding: 25px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    border: 3px solid black;
-    align-self: center;
-    align-content: center;
-    margin: 15px;
-    
-}
 
-footer nav {
-    display: flex-inline;
-    text-decoration: none;
-    align-items: center;
-}
+
 
 
 

@@ -8,26 +8,34 @@
 </head>
 <body>
     <header class="header">
+        <nav>
+            <a class="link-effect" href="../">Home</a>
+            <a class="link-effect" href="../products/">Buy Veggies</a>
+        </nav>
         <h1>Your virtual veggie cart</h1>
     </header>
     
     <main id="insert-rows">
-        <tbody id="table-body">
-            <tr id="row1">
-                <th></th>
-                <th></th>
-                <th></th>
-            </tr>
-            <tr id="row2">
-                <th></th>
-                <th></th>
-                <th></th>
-            </tr>
-            <tr id="row3">
-                <th></th>
-                <th></th>
-                <th></th>
-            </tr>
+        <table>
+            <thead>
+                <tr>
+                    <th class="align-left">Veggie</th>
+                    <th></th>
+                    <th>Qty</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+            <tfoot>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th>Order Total:</th>
+                    <th id="order-total"></th>
+                </tr>
+            </tfoot>
         <!--
             <tr>
                 <td class="top-left">Cherry Tomato</td>
@@ -36,19 +44,15 @@
             <td class="total-dollar">$8.00</td>
         </tr>
         -->
-        </tbody>
-        
+        </table>
+
+        <div class="button-container">
+            <button id="order-button">Place Order</button>
+        </div>
         
     </main>
-            <div id="button">
-                <button>Place Order</button>
-            </div>
         
             <footer>
-                <nav>
-                    <a href="../">Home</a>
-                    <a href="../products/">Buy Veggies</a>
-                </nav>
             </footer>
             <script src="shopping-cart.js" type="module"></script>
         </body>

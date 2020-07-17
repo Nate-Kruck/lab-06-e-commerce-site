@@ -1,8 +1,34 @@
 body {
     background-image: url("../assets/wood-background.jpg");
     text-align: center;
-    background-repeat: none;
-    
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+nav {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    text-transform: uppercase;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    cursor: pointer;
+    border: 2px solid #F0EDEE;
+    border-radius: 14%;
+
+}
+
+header {
+    text-align: center;
+    padding: 10px;
+    font-size: 25px;
+}
+
+a {
+    padding: 20px;
+    color: #F0EDEE;
 }
 
 #veggies {
@@ -24,25 +50,17 @@ img, p, button {
     border-radius: 5px;
 }
 
-button:hover {
-    background-color: gray;
-}
-
-button:active {
-    background-color: #F0EDEE;
-}
-
 p {
-    color: white;
-}
-
-a {
     color: white;
 }
 
 h1 {
     color: #F0EDEE;
+    text-shadow: -2px 7px 8px #B68F40;
 }
+
+
+
 
 
 
