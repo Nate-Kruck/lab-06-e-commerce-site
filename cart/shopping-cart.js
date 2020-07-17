@@ -36,7 +36,7 @@ if (cart.length === 0) {
 // took this code from the example code
 else {
     orderButton.addEventListener('click', () => {
-        alert('Order placed:' + JSON.stringify(cart, true, ''));
+        alert('Order placed:' + (cart, true, ''));
         localStorage.removeItem('CART');
         window.location = '../index.html';
     });

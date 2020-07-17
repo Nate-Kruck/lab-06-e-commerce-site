@@ -18,7 +18,7 @@ ol, ul {
 img, p, button {
     padding: 6px 12px 6px 12px;
     margin: 0 5px;
-    border: 1px solid firebrick;
+    background-blend-mode: darken;
     color: black;
     text-align: center;
     border-radius: 5px;
@@ -29,7 +29,7 @@ button:hover {
 }
 
 button:active {
-    background-color: firebrick;
+    background-color: #F0EDEE;
 }
 
 p {
@@ -38,6 +38,10 @@ p {
 
 a {
     color: white;
+}
+
+h1 {
+    color: #F0EDEE;
 }
 
 

@@ -8,3 +8,4 @@ for (let i = 0; i < veggies.length; i++) {
     const yummyVeggie = renderVeggies(veggie);
     list.append(yummyVeggie);
 }
+

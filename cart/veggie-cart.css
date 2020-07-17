@@ -1,47 +1,49 @@
 body {
     text-align: center;
+    background-image: url("../assets/farm-background.jpg");
 }
 
 
 tr {
-    padding: 0;
+    padding: 2px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    border: 3px solid red;
     align-self: center;
 }
 
 td {
-    padding: 3px;
+    
     
 }
 
 img {
-    border: 3px solid black;
-    border-radius: 25%;
     width: 150px;
     width: 130px;
-
+    
 }
 
 #insert-rows {
-    padding: 5px;
+    padding: 25px;
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
     border: 3px solid black;
     align-self: center;
     align-content: center;
-    margin: 10px;
+    margin: 15px;
     
 }
 
 footer nav {
-    display: flex;
-    justify-content: flex-end;
+    display: flex-inline;
+    text-decoration: none;
     align-items: center;
 }
+
+
+
+
     
 
 

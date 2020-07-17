@@ -2,18 +2,19 @@ export default function renderLineItem(lineItem, veggie) {
     const tableRow = document.createElement('tr');
 
     
-    const veggieName = document.createElement('td');
+    
+    const veggieName = document.createElement('th');
     veggieName.classList.add('top-left');
     veggieName.textContent = veggie.name;
     tableRow.append(veggieName);
- 
+    
     const imgEl = document.createElement('img');
     imgEl.src = '../assets/' + veggie.image;
     imgEl.alt = veggie.name + ' tomato';
     tableRow.append(imgEl);
 
-    const quantityData = document.createElement('td');
-    quantityData.textContent = lineItem.quantity;
+    const quantityData = document.createElement('th');
+    quantityData.textContent = 'Qty:' + `${lineItem.quantity}`;
     tableRow.append(quantityData);
 
     const priceData = document.createElement('td');
@@ -22,7 +23,7 @@ export default function renderLineItem(lineItem, veggie) {
 
     const totalName = document.createElement('td');
     totalName.classList.add('total-dollar');
-    totalName.textContent = '$' + Number(lineItem.quantity * veggie.price).toFixed(2);
+    totalName.textContent = ' $' + Number(lineItem.quantity * veggie.price).toFixed(2);
     tableRow.append(totalName);
 
     return tableRow;
