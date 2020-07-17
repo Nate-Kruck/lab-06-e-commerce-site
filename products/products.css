@@ -1,7 +1,34 @@
 body {
-    background-image: url("../assets/ocean-blue.png");
+    background-image: url("../assets/wood-background.jpg");
     text-align: center;
-    
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+nav {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    text-transform: uppercase;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    cursor: pointer;
+    border: 2px solid #F0EDEE;
+    border-radius: 14%;
+
+}
+
+header {
+    text-align: center;
+    padding: 10px;
+    font-size: 25px;
+}
+
+a {
+    padding: 20px;
+    color: #F0EDEE;
 }
 
 #veggies {
@@ -17,19 +44,23 @@ ol, ul {
 img, p, button {
     padding: 6px 12px 6px 12px;
     margin: 0 5px;
-    border: 1px solid firebrick;
+    background-blend-mode: darken;
     color: black;
     text-align: center;
     border-radius: 5px;
 }
 
-button:hover {
-    background-color: gray;
+p {
+    color: white;
 }
 
-button:active {
-    background-color: firebrick;
+h1 {
+    color: #F0EDEE;
+    text-shadow: -2px 7px 8px #B68F40;
 }
+
+
+
 
 
 

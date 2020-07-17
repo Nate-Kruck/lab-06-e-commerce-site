@@ -33,13 +33,6 @@ export function calcOrderTotal(cart, veggies) {
     return Math.round(totalCost);
 }
 
-export function toUSD(number) {
-    return number.toLocalString('en-US', {
-        style: 'currency',
-        currency: 'USD'
-    });
-}
-
 export function getCart() {
     
     const emptyCart = '[]';
