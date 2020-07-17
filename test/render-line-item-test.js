@@ -15,7 +15,7 @@ test('should match static example number 2', (assert) => {
     };
 
     const tomatoes = findById(veggieData, lineItem.id);
-    const expected = '<tr><td class="top-left">Cherry Tomato</td><img src="../assets/cherry.jpg" alt="Cherry Tomato tomato"><td>4</td><td>$2.00</td><td class="total-dollar">$8.00</td></tr>';
+    const expected = '<tr><td class="align-left">Cherry Tomato</td><img src="../assets/cherry.jpg" alt="Cherry Tomato tomato"><td>4</td><td>$2.00</td><td class="total-dollar">$8.00</td></tr>';
 
     //Act
     //Call the function being tested and set result to a const
